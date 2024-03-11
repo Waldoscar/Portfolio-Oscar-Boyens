@@ -1,7 +1,7 @@
 //liquid nav
 
-let item = $(".item");
-let slider = $(".slider");
+export let item = $(".item");
+export let slider = $(".slider");
  
 item.on('click', function(){
     item.removeClass("current");
@@ -13,7 +13,7 @@ item.on("click", function(){
 });
 
 
-function moveSlider (target){
+export function moveSlider (target){
     let linkWidth = target.innerWidth();
     let linkOffset = target.offset().left;
     let navigationOffset = $(".navigation").offset().left;
@@ -29,14 +29,14 @@ window.addEventListener("resize", function(){
 
 //automatic slider
 
-const sectionHi = document.querySelector(".main-heading");
-const sectionSkills = document.querySelector(".skills");
-const sectionWork = document.getElementById("work");
+export const sectionHi = document.querySelector(".main-heading");
+export const sectionSkills = document.querySelector(".skills");
+export const sectionWork = document.getElementById("work");
 
-const SectionHiOptions = {threshold:0};
+export const SectionHiOptions = {threshold:0};
 
 
-const sectionHiObserver = new IntersectionObserver(function 
+export const sectionHiObserver = new IntersectionObserver(function 
     (entries){
         entries.forEach(entry => {
              if(entry.isIntersecting){
@@ -51,11 +51,11 @@ const sectionHiObserver = new IntersectionObserver(function
 
 sectionHiObserver.observe(sectionHi);
 
-const SectionSkillsOptions = {
+export const SectionSkillsOptions = {
     threshold: 0.35
 };
 
-const sectionSkillsObserver = new IntersectionObserver(function 
+export const sectionSkillsObserver = new IntersectionObserver(function 
     (entries){
         entries.forEach(entry => {
              if(entry.isIntersecting){
@@ -70,9 +70,9 @@ const sectionSkillsObserver = new IntersectionObserver(function
 
 
     
- let exception = document.getElementById("SkillsSection")
+ export let exception = document.getElementById("SkillsSection")
 
-function checker(){
+export function checker(){
 if(exception.classList.contains(".current") ){
     console.log("ham wa");
 }}
@@ -82,9 +82,9 @@ sectionSkillsObserver.observe(sectionSkills);
 
 
 
-const SectionWorkOptions = {threshold: 0.25 };
+export const SectionWorkOptions = {threshold: 0.25 };
 
-const sectionWorkObserver = new IntersectionObserver(function 
+export const sectionWorkObserver = new IntersectionObserver(function 
     (entries){
         entries.forEach(entry => {
              if(entry.isIntersecting){
@@ -121,21 +121,21 @@ sectionWorkObserver.observe(sectionWork);
 //     customCursor.style.transform = `translate(${evt.clientX}px,${evt.clientY}px)`;
 // }
 
-const customCursor = document. querySelector (".custom-cursor");
-const bound = document. querySelectorAll(".img-wrapper");
+// const customCursor = document. querySelector (".custom-cursor");
+// const bound = document. querySelectorAll(".img-wrapper");
 
-document.addEventListener('mouseenter',function() {
-    customCursor.css.display = 'block';
-});
-document.addEventListener('mouseleave', function() {
-    customCursor.css.display = 'none';
-});
-document.addEventListener("mouseleave", function (e) {
-    customCursor. style. cssText = "display: " + "none"
-}); 
+// document.addEventListener('mouseenter',function() {
+//     customCursor.css.display = 'block';
+// });
+// document.addEventListener('mouseleave', function() {
+//     customCursor.css.display = 'none';
+// });
+// document.addEventListener("mouseleave", function (e) {
+//     customCursor. style. cssText = "display: " + "none"
+// }); 
  
 
-window.addEventListener("mousemove", function (e) {
-    customCursor. style. cssText = "left: " + e.clientX
-    + "px; top: " + e.clientY + "px;";
-}); 
+// window.addEventListener("mousemove", function (e) {
+//     customCursor. style. cssText = "left: " + e.clientX
+//     + "px; top: " + e.clientY + "px;";
+// }); 
