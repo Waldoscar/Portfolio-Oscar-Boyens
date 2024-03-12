@@ -405,13 +405,13 @@ a{
 }
 .progress-bar{
   background-color: var(--clr-primary);
-  height: .5rem;
+  height: 0.4rem;
   border-radius: 100vmax;
   width: 0%;
 }
 @media (min-width:50em){
   .progress-bar{
-    height: 0.8rem;
+    height: 0.5rem;
   }
   .progress-wrapper{
     max-width: 10rem;
@@ -419,7 +419,7 @@ a{
 }
 
 .Ps{
-  width: 85%;
+  width: 90%;
 }
 .Il{
   width: 80%;
@@ -428,7 +428,7 @@ a{
   width: 80%;
 }
 .Ae{
-  width: 30%;
+  width: 45%;
 }
 .Bl{
   width: 70%;
@@ -439,15 +439,16 @@ a{
 
 .heading3{
   font-size: var(--fs-mittel);
+  text-align: center;
 }
 
 .more{
   display: flex;
   flex-direction: column;
   gap:var(--gap-size);
-  margin-top: calc(2.5 * var(--gap-size));
+  margin-top: calc(1.5 * var(--gap-size));
 }
-@media(min-width:80em){
+@media(min-width:70em){
   .more{
     flex-direction: row;
   }
@@ -682,7 +683,7 @@ box-shadow: var(--shadow-hover) var(--clr-always-black);
   flex-basis: 100%;
 }
 
-@media (min-width:100em){
+@media (min-width:70em){
   .even-columns{
    flex-direction: row;
   }
