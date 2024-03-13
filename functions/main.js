@@ -100,6 +100,25 @@ export const sectionWorkObserver = new IntersectionObserver(function
 sectionWorkObserver.observe(sectionWork);
 
 
+
+//mehr Button
+
+export let mehrButton = document.querySelector(".mehr-weniger-btn");
+export let expand = document.querySelector('.expand');
+export let more = document.querySelector('.more');
+
+mehrButton.addEventListener ('click',()=>{
+    expand.classList.toggle ('expanded');
+    more.classList.toggle('margin');
+    if (mehrButton.innerHTML === "mehr"){
+    mehrButton.innerHTML="weniger";
+}   else {mehrButton.innerHTML="mehr";
+}})
+
+
+
+
+
 //custom cursor
 
 
