@@ -234,6 +234,17 @@ a{
 
 /* ----------HEADER NAV--------  */
 
+.logo-wrapper{
+  display: none
+}
+@media (min-width:50em){
+  .logo-wrapper{
+    position: absolute;
+    display: block;
+    left: 50%;
+    scale: 80%;
+  }
+}
 
 .primary-header{
   margin-top: 2rem;
@@ -341,6 +352,12 @@ a{
   font-size:max(8vw,var(--fs-riesig));
   letter-spacing: -0.063ch;
   line-height: 90%;
+}
+.main-heading > span{
+  font-family: "DM Serif Display";
+  font-style: italic;
+  font-weight: 400;
+  color: var(--clr-primary);
 }
 
 .paragraph{
@@ -467,7 +484,7 @@ a{
 .mehr-weniger-btn{
   border-radius: 100vmax;
   padding-inline: 1rem;
-  cursor: pointer;
+  cursor: pointer !important;
   border:0;
   padding: var(--padding-block-spacer)var(--padding-inline-spacer);
   font-weight: var(--fw-bold);
@@ -477,6 +494,10 @@ a{
   border:  var(--boder-size) solid var(--clr-neutral-black);
   margin-top: var(--gap-size);
   transition: margin-top, 0.5s ease;
+}
+.mehr-weniger-btn:hover{
+  color: var(--clr-neutral-light);
+  background-color: var(--clr-neutral-black);
 }
 
 .expand{
@@ -506,6 +527,7 @@ a{
   grid-template-columns:1fr;
   gap:  var(--gap-size);
   min-width: 0;
+  margin-inline: calc(1.3* var(--gap-size));
 }
 
 @media(min-width:40em){
@@ -590,7 +612,8 @@ footer p{
 .email{
   padding-inline: 1.5rem;
   border-radius: 100vmax;
-  font-size: clamp(1.5rem,5vw, 15rem);
+  /* font-size: clamp(1.5rem,5vw, 15rem); */
+  font-size: calc(1.5vh + 3.5vw);
   transition: background-color ease .5s,color ease .5s,box-shadow ease .5s;
 }
 
