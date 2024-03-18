@@ -117,6 +117,20 @@ mehrButton.addEventListener ('click',()=>{
 
 //  scrolling
 
+let tl  = gsap.timeline({
+    scrollTrigger:{
+        trigger: '.anim',
+        start:'top 80%',
+        end: 'bottom center',
+
+    }
+})
+
+tl.from ('.anim',{
+    opacity:0,
+    y:100,
+})
+
 const lenis = new Lenis()
 
 lenis.on('scroll', (e) => {
@@ -130,15 +144,6 @@ gsap.ticker.add((time)=>{
 })
 
 gsap.ticker.lagSmoothing(0)
-
-
-
-
-
-
-
-
-
 //custom cursor
 
 
