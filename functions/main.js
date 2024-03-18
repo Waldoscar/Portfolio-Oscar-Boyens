@@ -115,7 +115,14 @@ mehrButton.addEventListener ('click',()=>{
 }   else {mehrButton.innerHTML="mehr";
 }})
 
-//  scrolling
+//load animation
+gsap.from('.navigation',{duration:.8,x:-200});
+gsap.from('.button',{duration:.8,x:200})
+gsap.from('.portrait',{y:100,opacity:0.4})
+gsap.from('.main-heading',{text:'bn hc s iiHica,Or',duration:1})
+gsap.from('.paragraph',{duration:2,text:'lruitiaoKeiS,uHiit  ictb,efn2seii,mvsfreercuürbnshr   hJirrce  .  dae Bdhiecurlkehli   e0lmänc sd suh bniinuDe s hn t zt iebet meb nsg eiet duestwacsie i.lgnken scnahrii nhhte   lnfwganmecI,dwcenn',duration:1})
+
+//scroll animation
 
 gsap.utils.toArray('.anim').forEach((anim) => {
 
@@ -124,34 +131,17 @@ let tl  = gsap.timeline({
         trigger: anim,
         start:'top 75%',
         toggleActions:'play none none reverse',
-
     }
 })
 
 tl.from (anim,{
-    duration:.8 ,
     opacity:0,
     y:100,
 })
 })
 
-gsap.utils.toArray('.img-inner-wrapper').forEach((job) => {
 
-let tl  = gsap.timeline({
-    scrollTrigger:{
-        trigger: job,
-        start:'top bottom',
-        end:'bottom center',
-        scrub:true,
-        markers:true
 
-    }
-})
-
-tl.from (job,{
-    rotationX:30
-})
-})
 
 
 
