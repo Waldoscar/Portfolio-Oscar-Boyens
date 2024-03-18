@@ -142,9 +142,6 @@ tl.from (anim,{
 
 
 
-
-
-
 //custom cursor
 
 

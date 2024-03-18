@@ -155,9 +155,6 @@ img {
   border-radius:1rem
 }
 
-#skills{
-  perspective: 1000px;
-}
 .anim{
   position: relative;
   transition: all cubic-bezier();
@@ -199,7 +196,6 @@ a{
 
 
 /* Button */
-
 
 .button{
   cursor: pointer;
@@ -669,6 +665,23 @@ box-shadow: var(--shadow-hover) var(--clr-always-black);
 
 
 
+/* –––––––klien––––––––––––––––––––– */
+
+.home-btn{
+  cursor: pointer;
+  border:0;
+  border-radius: 100vmax;
+  padding: var(--padding-block-spacer)var(--padding-inline-spacer);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-mini);
+  color:var(--clr-neutral-light) ;
+  background-color: var(--clr-neutral-black);
+  box-shadow: var(--box-shadow) var(--clr-shadow);
+  transition: color ease .5s;
+}
+.home-btn:hover{
+  color: var(--clr-primary);
+}
 
 
 
@@ -706,8 +719,13 @@ box-shadow: var(--shadow-hover) var(--clr-always-black);
 .fw-bold{font-weight:var(--fw-bold);}
 
 .padding-block{
-  padding-block: 2rem;
+  padding-block: var(--gap-size);
 }
+
+.padding-bottom{
+  padding-bottom: var(--gap-size);
+}
+
 @media(min-width:50em){
   .padding-block{
     padding-block: 8rem;
