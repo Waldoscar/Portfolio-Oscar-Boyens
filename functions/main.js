@@ -117,33 +117,44 @@ mehrButton.addEventListener ('click',()=>{
 
 //  scrolling
 
+gsap.utils.toArray('.anim').forEach((anim) => {
+
 let tl  = gsap.timeline({
     scrollTrigger:{
-        trigger: '.anim',
-        start:'top 80%',
-        end: 'bottom center',
+        trigger: anim,
+        start:'top 75%',
+        toggleActions:'play none none reverse',
 
     }
 })
 
-tl.from ('.anim',{
+tl.from (anim,{
+    duration:.8 ,
     opacity:0,
     y:100,
 })
-
-const lenis = new Lenis()
-
-lenis.on('scroll', (e) => {
-  console.log(e)
 })
 
-lenis.on('scroll', ScrollTrigger.update)
+gsap.utils.toArray('.img-inner-wrapper').forEach((job) => {
 
-gsap.ticker.add((time)=>{
-  lenis.raf(time * 1000)
+let tl  = gsap.timeline({
+    scrollTrigger:{
+        trigger: job,
+        start:'top bottom',
+        end:'bottom center',
+        scrub:true,
+        markers:true
+
+    }
 })
 
-gsap.ticker.lagSmoothing(0)
+tl.from (job,{
+    rotationX:30
+})
+})
+
+
+
 //custom cursor
 
 
