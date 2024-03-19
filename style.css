@@ -357,7 +357,7 @@ a{
   letter-spacing: -0.063ch;
   line-height: 90%;
 }
-.main-heading-serif{
+  .main-heading > span {
   font-family: "DM Serif Display";
   font-style: italic;
   font-weight: 400;
