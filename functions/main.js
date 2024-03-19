@@ -120,6 +120,7 @@ gsap.from('.navigation',{duration:.8,x:-200});
 gsap.from('.button',{duration:.8,x:200})
 gsap.from('.portrait',{y:100,opacity:0.4})
 
+
 //scroll animation
 
 gsap.utils.toArray('.anim').forEach((anim) => {

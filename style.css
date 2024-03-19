@@ -683,6 +683,30 @@ box-shadow: var(--shadow-hover) var(--clr-always-black);
   color: var(--clr-primary);
 }
 
+.bento-grid{
+  display: grid;
+  gap: var(--gap-size);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.bento-grid *{
+  object-fit: cover;
+}
+.bento-item{
+  display: flex;
+  align-items: center;
+  min-width: min-content;
+}
+
+.grid-col-span-2{
+  grid-column: span 1;
+}
+@media (min-width:50em){
+  .grid-col-span-2{
+  grid-column: span 2;
+  }
+}
+
+
 
 
 
