@@ -119,7 +119,7 @@ mehrButton.addEventListener ('click',()=>{
 gsap.from('.navigation',{duration:.8,x:-200});
 gsap.from('.button',{duration:.8,x:200})
 gsap.from('.portrait',{y:100,opacity:0.4})
-gsap.from('.main-heading',{text:'bn hc s iiHica,Or',duration:1})
+gsap.from('.main-heading',{text:{value:'Hi ich bin Oscar',oldClass:'.main-heading-serif'},duration:1})
 gsap.from('.paragraph',{duration:2,text:'lruitiaoKeiS,uHiit  ictb,efn2seii,mvsfreercuürbnshr   hJirrce  .  dae Bdhiecurlkehli   e0lmänc sd suh bniinuDe s hn t zt iebet meb nsg eiet duestwacsie i.lgnken scnahrii nhhte   lnfwganmecI,dwcenn',duration:1})
 
 //scroll animation
