@@ -128,8 +128,7 @@ gsap.utils.toArray('.anim').forEach((anim) => {
 let tl  = gsap.timeline({
     scrollTrigger:{
         trigger: anim,
-        start:'top 75%',
-        toggleActions:'play none none reverse',
+        start:'top 80%',
     }
 })
 
@@ -138,6 +137,38 @@ tl.from (anim,{
     y:100,
 })
 })
+
+let tl  = gsap.timeline({
+    scrollTrigger:{
+        trigger: ('.progress-bar'),
+        start:'top 90%',
+    }
+})
+
+tl.from (('.progress-bar'),{
+    width: '0%',
+    duration:1.3,
+    stagger:0.1,
+})
+
+var images = gsap.utils.toArray('.img-wrapper');
+
+images.forEach((image) => {
+  
+  gsap.from(image, { 
+    y:100,
+    opacity:0,
+    duration:1,
+    
+    scrollTrigger: {
+        trigger: image,
+        start:'top 70%',
+        end:'bottom 20%',
+    }
+});
+  
+})
+
 
 
 
