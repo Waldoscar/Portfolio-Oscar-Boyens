@@ -119,6 +119,8 @@ mehrButton.addEventListener ('click',()=>{
 gsap.from('.navigation',{duration:.8,x:-200});
 gsap.from('.button',{duration:.8,x:200})
 gsap.from('.portrait',{y:100,opacity:0.4})
+gsap.from('.paragraph',{duration:.8,y:100, opacity:0, text:{padSpace:true, value:'asfsdiufaposdihfasdhgoiasdghpo asdopghasopdig sdpogh asdhgoasd hgopsadh ghsadghsadpoghsapdnjdahgdos g sdo ghsadgh ölsadhgl h o'}})
+
 
 
 //scroll animation
@@ -158,15 +160,35 @@ images.forEach((image) => {
   gsap.from(image, { 
     y:100,
     opacity:0,
-    duration:1,
+    blur:1,
+    duration:0.6,
     
     scrollTrigger: {
         trigger: image,
-        start:'top 70%',
+        fastScrollEnd:700,
+        start:'top 78%',
         end:'bottom 20%',
     }
 });
-  
+})
+
+var logos = gsap.utils.toArray('.logo');
+
+logos.forEach((logo) => {
+
+let tl2  = gsap.timeline({
+    scrollTrigger:{
+        trigger: logo,
+        start:'-40% top',
+        end:'bottom top',
+        scrub:true
+    }
+})
+tl2.to (logo,{
+    rotation:360,
+    duration:1,
+    ease: 'circ.inOut'
+})
 })
 
 

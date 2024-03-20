@@ -238,17 +238,21 @@ a{
 
 /* ----------HEADER NAV--------  */
 
-.logo-wrapper{
-  display: none
+.logo{
+  position: block;
+  margin:auto;
+  margin-top: var(--gap-size);
+  color: var(--clr-neutral-black);
+
 }
 @media (min-width:50em){
-  .logo-wrapper{
+  .logo{
     position: absolute;
-    display: block;
     left: 50%;
-    scale: 80%;
+    margin-top: unset;
   }
 }
+
 
 .primary-header{
   margin-top: 2rem;
@@ -588,6 +592,15 @@ display: none;
 
 /* FOOTER  */
 
+footer > .logo{
+  display: block;
+  opacity: .5;
+}
+@media (min-width:50em){
+  footer > .logo{
+    display: none;
+  }
+}
 footer{
   display: flex;
   flex-direction: column;
