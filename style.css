@@ -595,6 +595,7 @@ display: none;
 footer > .logo{
   display: block;
   opacity: .5;
+  color: var(--clr-always-black);
 }
 @media (min-width:50em){
   footer > .logo{
