@@ -403,7 +403,7 @@ a{
 }
 
 .portrait{
-  width:10rem;
+  width:15rem;
   box-shadow: var(--box-shadow) var(--clr-shadow);
 }
 @media(min-width:50em){
@@ -788,7 +788,7 @@ box-shadow: var(--shadow-hover) var(--clr-always-black);
 .fw-bold{font-weight:var(--fw-bold);}
 
 .padding-block{
-  padding-block: var(--gap-size);
+  padding-block:calc( 3*var(--gap-size));
 }
 
 .padding-bottom{

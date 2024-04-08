@@ -45,10 +45,10 @@ export const sectionIntroObserver = new IntersectionObserver(function
                 item.removeClass("current");
                 $('.IntroSection').addClass ("current");
                 moveSlider($(".current"));
-                gsap.to('.navigation',{duration:.8,y:-200});
+                gsap.to('.navigation',{duration:1.5,x:-1000});
              }
              else{
-                gsap.to('.navigation',{duration:1,y:0})
+                gsap.to('.navigation',{duration:1,x:0})
              }
         });
     },SectionIntroOptions);
