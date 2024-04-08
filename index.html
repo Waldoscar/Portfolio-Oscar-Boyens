@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio xOscar Boyens</title>
+    <title>Portfolio Oscar Boyens</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,27 +11,30 @@
     <link rel="icon" href="Img/favicon.ico" sizes="32x32">
     <link rel="icon" href="Img/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="Img/apple-touch-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
   </head>
   <body>
-      <svg class="logo" width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_237_3)">
-          <path d="M34.9999 21.9866C34.9999 14.4996 28.7815 8.42859 21.1126 8.42859H19.8743V15.9608H21.1126C24.515 15.9608 27.2847 18.6649 27.2847 21.9866V28.4267H34.9999V21.9866Z" fill="currentColor"/>
-          <path d="M0 13.558C0 6.07099 6.21845 0 13.8874 0H15.1256V7.53225H13.8874C10.485 7.53225 7.7152 10.2363 7.7152 13.558V19.9981H0V13.558Z" fill="currentColor"/>
-          <path d="M19.8744 26.4419C19.8744 33.929 13.656 40 5.98707 40H4.74878V32.4677H5.98707C9.38947 32.4677 12.1592 29.7637 12.1592 26.4419V20.0019H19.8744V26.4419Z" fill="currentColor"/>
-        </g>
-          <defs>
-            <clipPath id="clip0_237_3">
-              <rect width="35" height="40" fill="white"/>
-            </clipPath>
-          </defs>
-      </svg>
+      <section id="intro">
+        <svg  class="logo" width="30" height="35" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_237_3)">
+            <path d="M34.9999 21.9866C34.9999 14.4996 28.7815 8.42859 21.1126 8.42859H19.8743V15.9608H21.1126C24.515 15.9608 27.2847 18.6649 27.2847 21.9866V28.4267H34.9999V21.9866Z" fill="currentColor"/>
+            <path d="M0 13.558C0 6.07099 6.21845 0 13.8874 0H15.1256V7.53225H13.8874C10.485 7.53225 7.7152 10.2363 7.7152 13.558V19.9981H0V13.558Z" fill="currentColor"/>
+            <path d="M19.8744 26.4419C19.8744 33.929 13.656 40 5.98707 40H4.74878V32.4677H5.98707C9.38947 32.4677 12.1592 29.7637 12.1592 26.4419V20.0019H19.8744V26.4419Z" fill="currentColor"/>
+          </g>
+            <defs>
+              <clipPath id="clip0_237_3">
+                <rect width="35" height="40" fill="white"/>
+              </clipPath>
+            </defs>
+        </svg>
+      </section>
     <header class="primary-header">
-              
       <div class="container">
         <div class="nav-wrapper">
         <nav class="navigation">
           <ul role="list" class="nav-list">
-            <li><a class="HiSection       item current" href="#">Hi</a></li>
+            <li><a class="IntroSection      item current"  href="#intro"><i class="ri-arrow-up-line"></i></a></li>
+            <li><a class="HiSection       item " href="#hi">Hi</a></li>
             <li><a id= "SkillsSection" class="SkillsSection   item" href="#skills">über mich</a></li>
             <li><a class="WorkSection     item" href="#work">Arbeiten</a></li>
             <div class="slider"></div>
@@ -47,11 +50,25 @@
     </div>
     </header>
     <main>
+      <section class="padding-block" >
+        <div class="container">
+          <div class="Intro ">
+            <h1 class="intro-heading">Portfolio <br>Oscar Boyens</h1>
+            <p>ein kleiner Einblick in meine Projekte</p>
+          </div>
+          <div class="showreal">
+              <video class="showreal-video anim" playsinline loop muted autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                <source src="Img/GigaNetz_Film.mp4"/>
+              </video>
+             </div>
+          </div>
+        </div>
+      </section>
       <section class="padding-block" id="hi">
         <div class="container ">
           <div class="columns start">
             <div class="flow"> 
-              <h1 class="main-heading"><span>Hi,</span> ich bin Oscar</h1>
+              <h2 class="main-heading" id="main-heading"><span>Hi,</span> ich bin Oscar</h2>
               <p class="paragraph">
                 Ich bin 20 Jahre alt und lebe in
                 Hamburg. Schon seit ich klein
@@ -70,7 +87,7 @@
       <section class="padding-block" id="skills">
         <div class="container">
           <div class="card anim">
-            <h2 class="secondary-heading">Fähigkeiten</h2>
+            <h3 class="secondary-heading">Fähigkeiten</h2>
             <div class="even-columns">
               <div class="skills ">
                 <div class="skill">
@@ -117,7 +134,7 @@
             <div class="expand">
               <div class="more">
                 <div>
-                  <h3 class="heading3">Ausbildung</h3>
+                  <h4 class="heading3">Ausbildung</h4>
                   <p>Ich arbeite seit zwei Jahren bei der Agentur hey folks, die
                     sich auf Post Produktion und Reinzeichnung spezialisiert
                     und konnte mir in dieser Zeit wertvolles Wissen aneignen.
@@ -126,7 +143,7 @@
                     von Webseiten selbst erarbeiten.</p>
                 </div>
                 <div>
-                  <h3 class="heading3">Erfahrung</h3>
+                  <h4 class="heading3">Erfahrung</h4>
                   <p>Derzeit absolviere ich ein Bachelor Studium zum Medien
                     Designer an der IU Internationale Hochschule.</p>
                 </div>
@@ -138,7 +155,7 @@
       </section>
       <section class="padding-block" id="work">
         <div class="container">
-            <h2 class="secondary-heading anim">Arbeiten</h2>
+            <h3 class="secondary-heading anim">Arbeiten</h3>
           <div class="work-grid">
             <a href="klien.html" class="img-wrapper">
               <img src="Img/klien-logo.webp" alt="">
@@ -176,7 +193,7 @@
       <p>©oscarboyens 2024</p>
       <svg class="logo" width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_237_3)">
-          <path d="M34.9999 21.9866C34.9999 14.4996 28.7815 8.42859 21.1126 8.42859H19.8743V15.9608H21.1126C24.515 15.9608 27.2847 18.6649 27.2847 21.9866V28.4267H34.9999V21.9866Z" fill="currentColor"/>
+          <path d="M34.9999 21.9866C34.9999 14.4996 28.7815 8.42859 21.1126 8.42859H19.8743V15.9608H21.1126C24.515 15.9608 27.2847 18.6649 27.2847 21.9866V28.4267h44.9999V21.9866Z" fill="currentColor"/>
           <path d="M0 13.558C0 6.07099 6.21845 0 13.8874 0H15.1256V7.53225H13.8874C10.485 7.53225 7.7152 10.2363 7.7152 13.558V19.9981H0V13.558Z" fill="currentColor"/>
           <path d="M19.8744 26.4419C19.8744 33.929 13.656 40 5.98707 40H4.74878V32.4677H5.98707C9.38947 32.4677 12.1592 29.7637 12.1592 26.4419V20.0019H19.8744V26.4419Z" fill="currentColor"/>
         </g>

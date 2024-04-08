@@ -32,8 +32,31 @@ window.addEventListener("resize", function(){
 export const sectionHi = document.querySelector(".main-heading");
 export const sectionSkills = document.querySelector(".skills");
 export const sectionWork = document.getElementById("work");
+export const sectionIntro = document.getElementById("intro");
+
+export const SectionIntroOptions = {threshold:0};
+
+
+export const sectionIntroObserver = new IntersectionObserver(function 
+    (entries){
+        entries.forEach(entry => {
+             if(entry.isIntersecting){
+                console.log(entry.target);
+                item.removeClass("current");
+                $('.IntroSection').addClass ("current");
+                moveSlider($(".current"));
+                gsap.to('.navigation',{duration:.8,y:-200});
+             }
+             else{
+                gsap.to('.navigation',{duration:1,y:0})
+             }
+        });
+    },SectionIntroOptions);
+
+sectionIntroObserver.observe(sectionIntro);
 
 export const SectionHiOptions = {threshold:0};
+
 
 
 export const sectionHiObserver = new IntersectionObserver(function 
@@ -116,16 +139,16 @@ mehrButton.addEventListener ('click',()=>{
 }})
 
 //load animation
-gsap.from('.navigation',{duration:.8,x:-200});
+// gsap.from('.navigation',{duration:.8,x:-200});
 gsap.from('.button',{duration:.8,x:200})
 gsap.from('.portrait',{y:100,opacity:0.4})
-gsap.from('.paragraph',{duration:.8,y:100, opacity:0, text:{padSpace:true, value:'asfsdiufaposdihfasdhgoiasdghpo asdopghasopdig sdpogh asdhgoasd hgopsadh ghsadghsadpoghsapdnjdahgdos g sdo ghsadgh ölsadhgl h o'}})
-
-
-
+gsap.from('.paragraph',{duration:.8,y:100, opacity:0, text:{ value:'asfsdiufaposdihfasdhgoiasdghpo asdopghasopdig sdpogh asdhgoasd hgopsadh ghsadghsadpoghsapdnjdahgdos g sdo ghsadgh ölsadhgl h o',padSpace:true,}})
+gsap.from('.main-heading',{x:-100,opacity:0,delay:.3})
 //scroll animation
 
-gsap.utils.toArray('.anim').forEach((anim) => {
+var anim = gsap.utils.toArray('.anim');
+
+anim.forEach((anim) => {
 
 let tl  = gsap.timeline({
     scrollTrigger:{
@@ -160,35 +183,16 @@ images.forEach((image) => {
   gsap.from(image, { 
     y:100,
     opacity:0,
-    blur:1,
     duration:0.6,
     
     scrollTrigger: {
         trigger: image,
-        fastScrollEnd:700,
         start:'top 78%',
         end:'bottom 20%',
+        scrub:false,
+        toggleActions:'play none none none'
     }
 });
-})
-
-var logos = gsap.utils.toArray('.logo');
-
-logos.forEach((logo) => {
-
-let tl2  = gsap.timeline({
-    scrollTrigger:{
-        trigger: logo,
-        start:'-40% top',
-        end:'bottom top',
-        scrub:true
-    }
-})
-tl2.to (logo,{
-    rotation:360,
-    duration:1,
-    ease: 'circ.inOut'
-})
 })
 
 
