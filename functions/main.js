@@ -45,7 +45,7 @@ export const sectionIntroObserver = new IntersectionObserver(function
                 item.removeClass("current");
                 $('.IntroSection').addClass ("current");
                 moveSlider($(".current"));
-                gsap.to('.navigation',{duration:1.5,x:-1000});
+                // gsap.to('.navigation',{duration:1.5,x:-1000});
              }
              else{
                 gsap.to('.navigation',{duration:1,x:0})
