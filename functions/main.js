@@ -93,15 +93,7 @@ export const sectionSkillsObserver = new IntersectionObserver(function
 
 
     
- export let exception = document.getElementById("SkillsSection")
 
-export function checker(){
-if(exception.classList.contains(".current") ){
-    console.log("ham wa");
-}}
-
-
-sectionSkillsObserver.observe(sectionSkills);
 
 
 

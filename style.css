@@ -727,6 +727,10 @@ box-shadow: var(--shadow-hover) var(--clr-always-black);
 }
 .home-btn:hover{
   color: var(--clr-primary);
+  box-shadow: var(--shadow-hover);
+}
+.projekt{
+  margin-inline: auto;
 }
 
 .bento-grid{
