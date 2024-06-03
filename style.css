@@ -712,6 +712,9 @@ box-shadow: var(--shadow-hover) var(--clr-always-black);
 
 
 /* –––––––klien––––––––––––––––––––– */
+.projekt-heading{
+  font-size: var(--fs-riesig);
+}
 
 .home-btn{
   cursor: pointer;
@@ -723,11 +726,12 @@ box-shadow: var(--shadow-hover) var(--clr-always-black);
   color:var(--clr-neutral-light) ;
   background-color: var(--clr-neutral-black);
   box-shadow: var(--box-shadow) var(--clr-shadow);
-  transition: color ease .5s;
+  transition: scale ease.5s, color ease.5s, box-shadow ease.5s;
 }
 .home-btn:hover{
   color: var(--clr-primary);
-  box-shadow: var(--shadow-hover);
+  box-shadow:var(--shadow-hover) var(--clr-shadow);
+  scale: 105%;
 }
 .projekt{
   margin-inline: auto;
