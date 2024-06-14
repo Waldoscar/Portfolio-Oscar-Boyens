@@ -770,6 +770,13 @@ box-shadow: var(--shadow-hover) var(--clr-always-black);
 
 
 
+
+/* –––––––Impressum–––––––––– */
+.impressum-seite{
+  height: 100vh;
+}
+
+
 /* –––––––UTILITY CLASSES–––––––––– */
 
 
