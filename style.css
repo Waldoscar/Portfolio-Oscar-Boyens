@@ -370,6 +370,7 @@ a{
   box-shadow: var(--box-shadow) var(--clr-shadow);
   margin-inline: var(--gap-size);
   max-width: 70%;
+  max-height: 90vh;
   margin-inline: auto;
 }
 @media (min-width:50em){
@@ -772,8 +773,8 @@ box-shadow: var(--shadow-hover) var(--clr-always-black);
 
 
 /* –––––––Impressum–––––––––– */
-.impressum-seite{
-  height: 100vh;
+.impressum-seite * span{
+  font-weight: 600;
 }
 
 
