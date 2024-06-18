@@ -142,18 +142,22 @@ var anim = gsap.utils.toArray('.anim');
 
 anim.forEach((anim) => {
 
-let tl  = gsap.timeline({
-    scrollTrigger:{
-        trigger: anim,
-        start:'top 80%',
-    }
+    gsap.from(anim, { 
+        y:100,
+        opacity:0,
+        duration:0.6,
+        
+        scrollTrigger: {
+            trigger: anim,
+            start:'top 78%',
+            end:'bottom 20%',
+            scrub:false,
+            toggleActions:'play none none none'
+        }
+});
 })
 
-tl.from (anim,{
-    opacity:0,
-    y:100,
-})
-})
+
 
 let tl  = gsap.timeline({
     scrollTrigger:{
@@ -161,12 +165,14 @@ let tl  = gsap.timeline({
         start:'top 90%',
     }
 })
-
 tl.from (('.progress-bar'),{
     width: '0%',
     duration:1.3,
     stagger:0.1,
 })
+
+
+
 
 var images = gsap.utils.toArray('.img-wrapper');
 
@@ -186,46 +192,3 @@ images.forEach((image) => {
     }
 });
 })
-
-
-
-
-//custom cursor
-
-
-// const bound = $(".img-wrapper");
-// const customCursor = $(".custom-cursor .on-hover");
-
-// const customCursor = document.querySelector('.custom-cursor .on-hover');
-
-// document.addEventListener('mouseenter',() => {
-//     customCursor.css.display = 'block';
-// });
-// document.addEventListener('mouseleave',() => {
-//     customCursor.css.display = 'none';
-// });
-
-// document.addEventListener('mousemove',TrackCursor);
-
-// function TrackCursor(evt){
-//     customCursor.style.transform = `translate(${evt.clientX}px,${evt.clientY}px)`;
-// }
-
-// const customCursor = document. querySelector (".custom-cursor");
-// const bound = document. querySelectorAll(".img-wrapper");
-
-// document.addEventListener('mouseenter',function() {
-//     customCursor.css.display = 'block';
-// });
-// document.addEventListener('mouseleave', function() {
-//     customCursor.css.display = 'none';
-// });
-// document.addEventListener("mouseleave", function (e) {
-//     customCursor. style. cssText = "display: " + "none"
-// }); 
- 
-
-// window.addEventListener("mousemove", function (e) {
-//     customCursor. style. cssText = "left: " + e.clientX
-//     + "px; top: " + e.clientY + "px;";
-// }); 
