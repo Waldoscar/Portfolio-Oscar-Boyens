@@ -12,6 +12,16 @@
     <link rel="icon" href="Img/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="Img/apple-touch-icon.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script
+          src="https://code.jquery.com/jquery-3.3.1.js"
+          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous">
+    </script>
+    <script> 
+          $(function(){ 
+            $("#footer").load("footer.html"); 
+          });
+    </script>
   </head>
   <body>
       <section id="intro">
@@ -53,7 +63,7 @@
       <section class="padding-block" >
         <div class="container">
           <div class="Intro ">
-            <h1 class="intro-heading">Portfolio <br>Oscar Boyens</h1>
+            <h1 class="intro-heading">Portfolio <br><span>Oscar </span>Boyens</h1>
             <p>ein kleiner Einblick in meine Projekte</p>
               <video class="showreal-video anim" playsinline loop muted autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
                 <source src="Img/byaccident-carabina.mp4"/>
@@ -133,9 +143,8 @@
               <div class="more">
                 <div>
                   <h4 class="heading3">Ausbildung</h4>
-                  <p>Ich arbeite seit zwei Jahren bei der Agentur hey folks, die
-                    sich auf Post Produktion und Reinzeichnung spezialisiert
-                    und konnte mir in dieser Zeit wertvolles Wissen aneignen.
+                  <p>Derzeit arbeite ich bei der Agentur <a href="https://kundenbuerohh.de">Kundenb&#252;ro Hamburg</a> 
+                    in Ottensen als Desginer.
                     Darüber hinaus konnte ich mir Fähigkeiten wie das
                     3D-Rendering oder – seit Neuestem – das Programmieren
                     von Webseiten selbst erarbeiten.</p>
@@ -173,37 +182,8 @@
           </div>
         </div>
       </section>
-      <footer id="footer">
-        <div class="container">
-        <div class="footer-wrapper">
-          <div class="email"> 
-            <a href="mailto:oscarboyens@gmail.com">oscarboyens@gmail.com</a>
-          </div>
-          <div class="social-links">
-            <a href="#">instagram</a>
-            <a href="#">linkedin</a>
-          </div>
-        </div>
-      </div>
-      <div class="impressum">
-        <a href="impressum.html">Impressum </a><a href="">Datenschutz</a>
-      </div>
-      <p>©oscarboyens 2024</p>
-      <svg class="logo" width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_237_3)">
-          <path d="M34.9999 21.9866C34.9999 14.4996 28.7815 8.42859 21.1126 8.42859H19.8743V15.9608H21.1126C24.515 15.9608 27.2847 18.6649 27.2847 21.9866V28.4267h44.9999V21.9866Z" fill="currentColor"/>
-          <path d="M0 13.558C0 6.07099 6.21845 0 13.8874 0H15.1256V7.53225H13.8874C10.485 7.53225 7.7152 10.2363 7.7152 13.558V19.9981H0V13.558Z" fill="currentColor"/>
-          <path d="M19.8744 26.4419C19.8744 33.929 13.656 40 5.98707 40H4.74878V32.4677H5.98707C9.38947 32.4677 12.1592 29.7637 12.1592 26.4419V20.0019H19.8744V26.4419Z" fill="currentColor"/>
-        </g>
-          <defs>
-            <clipPath id="clip0_237_3">
-              <rect width="35" height="40" fill="white"/>
-            </clipPath>
-          </defs>
-      </svg>
-      </footer>
     </main>
-    <div class="custom-cursor on-hover" custom-cursor><p>mehr</p></div> 
+    <div id="footer"></div>
   </body>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
