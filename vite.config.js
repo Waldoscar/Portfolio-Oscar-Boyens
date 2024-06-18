@@ -6,9 +6,9 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                key: resolve(__dirname, 'footer.html'),
-                path: resolve(__dirname, 'klien.html'),
-                path: resolve(__dirname,'impressum.html'),
+                footer: resolve(__dirname, 'footer.html'),
+                klien: resolve(__dirname, 'klien.html'),
+                impressum: resolve(__dirname,'impressum.html'), 
             
             }
         }
