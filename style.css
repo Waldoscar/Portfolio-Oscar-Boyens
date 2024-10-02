@@ -506,7 +506,7 @@ img {
   font-weight: var(--fw-bold);
   font-size: var(--fs-mini);
   color:var(--clr-neutral-black);
-  background-color: var(--clr-neutral-dark);
+  background-color: rgba(0,0,0,0);
   border:  var(--boder-size) solid var(--clr-neutral-black);
   margin-top: var(--gap-size);
   transition: margin-top, 0.5s ease;
@@ -689,9 +689,10 @@ box-shadow: var(--shadow-hover) var(--clr-always-black);
 
 
 
-/* –––––––klien––––––––––––––––––––– */
+/* –––––––project page––––––––––––––––––––– */
 .projekt-heading{
   font-size: var(--fs-riesig);
+  line-height: 100%;
 }
 
 .home-btn{
