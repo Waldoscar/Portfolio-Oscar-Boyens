@@ -78,34 +78,39 @@
       <div class="container">
         <div class="bento-grid">
           <div class="bento-item anim"> 
-            <img src="Img/klien-logo.webp" alt="">
+            <img class="bento-img" src="Img/klien-logo.webp" alt="Logo">
           </div>
           <div class="bento-item anim">
-            <img src="Img/klien-logo-invert.webp" alt="">
+            <img class="bento-img" src="Img/klien-logo-invert.webp" alt="Logo invertiert">
           </div>
           <div class="bento-item anim grid-col-span-2">
-            <img src="Img/klien_Nachfuellbeutel_neu.webp" alt="">
+            <img class="bento-img" src="Img/klien_Nachfuellbeutel_neu.webp" alt="Nachfüllbeutel">
           </div>
           <div class="bento-item anim">
-            <img src="Img/221221_klien_Flasche_5.webp" alt="">
+            <img class="bento-img" src="Img/221221_klien_Flasche_5.webp" alt="Premium Flasche">
           </div>
           <div class="bento-item anim">
-            <img src="Img/klien_Plastikflasche_Klassiker.webp" alt="">
+            <img class="bento-img" src="Img/klien_Plastikflasche_Klassiker.webp" alt="Plastikflasche">
           </div>
           <div class="bento-item anim">
-            <img src="Img/Kitchen_scene3.webp" alt="">
+            <img class="bento-img" src="Img/Kitchen_scene3.webp" alt="Küchenszene 01">
           </div>
           <div class="bento-item anim">
-            <img src="Img/Nachfuellbeutel_scene.webp" alt="">
+            <img class="bento-img" src="Img/Nachfuellbeutel_scene.webp" alt="Küchenszene">
           </div>
         </div>
+        <a href="index.html#work"><button class="mehr-weniger-btn">alle Projekte</button></a>
       </div>
-      <dialog></dialog>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>   
     </section>
     <div id="footer"></div>
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="functions/main.js" type="module"></script>
+<script src="functions/project.js" type="module"></script>   
 </html>

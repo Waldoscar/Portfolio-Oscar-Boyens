@@ -30,11 +30,13 @@ window.addEventListener("resize", function(){
 //automatic slider
 
 export const sectionHi = document.querySelector(".main-heading");
-export const sectionSkills = document.querySelector(".skills");
+export const sectionSkills = document.getElementById("skills");
 export const sectionWork = document.getElementById("work");
 export const sectionIntro = document.getElementById("intro");
 
-export const SectionIntroOptions = {threshold:0};
+export const SectionIntroOptions = {
+    rootMargin: "0px 0px 80% 0px",
+};
 
 
 export const sectionIntroObserver = new IntersectionObserver(function 
@@ -45,7 +47,6 @@ export const sectionIntroObserver = new IntersectionObserver(function
                 item.removeClass("current");
                 $('.IntroSection').addClass ("current");
                 moveSlider($(".current"));
-                // gsap.to('.navigation',{duration:1.5,x:-1000});
              }
              else{
                 gsap.to('.navigation',{duration:1,x:0})
@@ -55,7 +56,7 @@ export const sectionIntroObserver = new IntersectionObserver(function
 
 sectionIntroObserver.observe(sectionIntro);
 
-export const SectionHiOptions = {threshold:0};
+export const SectionHiOptions = {threshold:0.25};
 
 
 
@@ -67,16 +68,13 @@ export const sectionHiObserver = new IntersectionObserver(function
                 item.removeClass("current");
                 $('.HiSection').addClass ("current");
                 moveSlider($(".current"));
-
              }
         });
     },SectionHiOptions);
 
 sectionHiObserver.observe(sectionHi);
 
-export const SectionSkillsOptions = {
-    threshold: 0.35
-};
+export const SectionSkillsOptions = {threshold: 0.5};
 
 export const sectionSkillsObserver = new IntersectionObserver(function 
     (entries){
@@ -91,10 +89,7 @@ export const sectionSkillsObserver = new IntersectionObserver(function
         });
     },SectionSkillsOptions);
 
-
-    
-
-
+sectionSkillsObserver.observe(sectionSkills);
 
 
 export const SectionWorkOptions = {threshold: 0.25 };
@@ -163,12 +158,13 @@ let tl  = gsap.timeline({
     scrollTrigger:{
         trigger: ('.progress-bar'),
         start:'top 90%',
+         toggleActions:'play restart playx none'
     }
 })
 tl.from (('.progress-bar'),{
     width: '0%',
     duration:1.3,
-    stagger:0.1,
+    stagger:0.2,
 })
 
 
