@@ -8,6 +8,8 @@ export default defineConfig({
                 main: resolve(__dirname, 'index.html'),
                 footer: resolve(__dirname, 'footer.html'),
                 klien: resolve(__dirname, 'klien.html'),
+                fahira: resolve(__dirname, 'fahira.html'),
+                bilder: resolve(__dirname, 'bilder.html'),
                 impressum: resolve(__dirname,'impressum.html'), 
             
             }
