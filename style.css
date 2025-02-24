@@ -273,7 +273,7 @@ img {
   cursor:pointer;
   position: relative;
   z-index: 5;
-  padding-inline: .8rem;
+  padding-inline: .9rem;
 }
 @media(min-width:50em)
 {
@@ -295,7 +295,7 @@ img {
 .intro-heading{
   text-align: center;
   font-weight: var(--fw-bold);
-  font-size:clamp(8vw,var(--fs-riesig),var(--fs-groß));
+  font-size:max(var(--fs-riesig),var(--fs-groß));
   letter-spacing: -0.063ch;
   line-height: 90%;
 }
