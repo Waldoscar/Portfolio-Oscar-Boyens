@@ -197,20 +197,6 @@ img {
 
 /* ----------HEADER NAV--------  */
 
-.logo{
-  position:absolute;
-  margin:auto;
-  left: 50%;
-  margin-block: var(--gap-size);
-  color: var(--clr-neutral-black);
-
-}
-@media (min-width:50em){
-  .logo{
-    left: 50%;
-    top:5%;
-  }
-}
 
 
 
@@ -812,7 +798,7 @@ box-shadow: var(--shadow-hover) var(--clr-always-black);
 
 .close:hover,
 .close:focus {
-  color: #bbb;
+  color: var(--clr-neutral-light);
   text-decoration: none;
   cursor: pointer;
 }
