@@ -297,7 +297,12 @@ img {
   font-weight: var(--fw-bold);
   font-size:max(var(--fs-riesig),var(--fs-groß));
   letter-spacing: -0.063ch;
-  line-height: 90%;
+  line-height: 80%;
+}
+@media(min-width:50em){
+.intro-heading{
+  line-height: 100%;
+}
 }
 .intro-heading > span{
   font-family: "DM Serif Display";
