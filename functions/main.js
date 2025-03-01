@@ -26,16 +26,20 @@ window.addEventListener("resize", function(){
     moveSlider($(".current"))
 });
 
+window.addEventListener("scroll", function(){
+    moveSlider($(".current"))
+});
+
 
 //automatic slider
 
-export const sectionHi = document.querySelector(".main-heading");
+export const sectionHi = document.getElementById("hi");
 export const sectionSkills = document.getElementById("skills");
 export const sectionWork = document.getElementById("work");
 export const sectionIntro = document.getElementById("intro");
 
 export const SectionIntroOptions = {
-    rootMargin: "0px 0px 80% 0px",
+    threshold: 0.25
 };
 
 
@@ -56,7 +60,7 @@ export const sectionIntroObserver = new IntersectionObserver(function
 
 sectionIntroObserver.observe(sectionIntro);
 
-export const SectionHiOptions = {threshold:0.25};
+export const SectionHiOptions = {threshold:0.8};
 
 
 
@@ -127,12 +131,9 @@ mehrButton.addEventListener ('click',()=>{
 
 //load animation
 // gsap.from('.navigation',{duration:.8,x:-200});
-gsap.from('.button',{duration:.8,x:200})
-gsap.from('.portrait',{y:100,opacity:0.4})
-gsap.from('.paragraph',{duration:.8,y:100, opacity:0, text:{ value:'asfsdiufaposdihfasdhgoiasdghpo asdopghasopdig sdpogh asdhgoasd hgopsadh ghsadghsadpoghsapdnjdahgdos g sdo ghsadgh ölsadhgl h o',padSpace:true,}})
-gsap.from('.main-heading',{x:-100,opacity:0,delay:.3})
-//scroll animation
+gsap.from('.button',{duration:.8,x:200});
 
+//scroll animation
 var anim = gsap.utils.toArray('.anim');
 
 anim.forEach((anim) => {
@@ -147,7 +148,7 @@ anim.forEach((anim) => {
             start:'top 78%',
             end:'bottom 20%',
             scrub:false,
-            toggleActions:'play none none none'
+            toggleActions:'play restart play none'
         }
 });
 })
@@ -158,7 +159,7 @@ let tl  = gsap.timeline({
     scrollTrigger:{
         trigger: ('.progress-bar'),
         start:'top 90%',
-         toggleActions:'play restart playx none'
+         toggleActions:'play restart play none'
     }
 })
 tl.from (('.progress-bar'),{
