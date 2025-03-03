@@ -130,7 +130,7 @@ mehrButton.addEventListener ('click',()=>{
 }})
 
 //load animation
-// gsap.from('.navigation',{duration:.8,x:-200});
+gsap.from('.navigation',{duration:.8,x:-200});
 gsap.from('.button',{duration:.8,x:200});
 
 //scroll animation
